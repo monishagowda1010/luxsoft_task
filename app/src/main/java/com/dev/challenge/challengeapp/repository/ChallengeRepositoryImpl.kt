@@ -6,5 +6,5 @@ import javax.inject.Inject
 
 class ChallengeRepositoryImpl @Inject constructor(private val apiService: ApiService) :
     ChallengeRepository {
-    override suspend fun getAllPosts(): GetPostsResponse = apiService.getAllPosts()
+
 }

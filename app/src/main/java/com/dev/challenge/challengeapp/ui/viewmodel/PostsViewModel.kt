@@ -14,24 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PostsViewModel @Inject constructor(
-    private val repository: ChallengeRepository
+
 ) : ViewModel() {
-
-    private var _posts: MutableLiveData<Resource<GetPostsResponse>> = MutableLiveData()
-    val posts: LiveData<Resource<GetPostsResponse>> get() = _posts
-
-    init {
-        viewModelScope.launch {
-            try {
-                _posts.value = Resource.Loading(null)
-                val response = repository.getAllPosts()
-                Log.d("log","response")
-                _posts.value = Resource.Success(response)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                _posts.value = Resource.Error(e.toString(), null)
-            }
-        }
-    }
 
 }

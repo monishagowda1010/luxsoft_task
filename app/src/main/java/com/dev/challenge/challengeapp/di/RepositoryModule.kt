@@ -14,5 +14,4 @@ abstract class RepositoryModule {
     @Binds
     abstract fun bindsChallengeRepository(challengeRepositoryImpl: ChallengeRepositoryImpl): ChallengeRepository
 
-
 }
