@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.dev.challenge.challengeapp.databinding.FragmentProductsBinding
+import com.dev.challenge.challengeapp.databinding.FragmentPostsBinding
 import com.dev.challenge.challengeapp.ui.viewmodel.PostsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,7 +15,7 @@ class PostsFragment : Fragment() {
 
     private val viewModel: PostsViewModel by viewModels()
 
-    private var _binding: FragmentProductsBinding? = null
+    private var _binding: FragmentPostsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class PostsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProductsBinding.inflate(inflater, container, false)
+        _binding = FragmentPostsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
