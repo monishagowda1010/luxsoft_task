@@ -3,7 +3,7 @@ package com.dev.challenge.challengeapp.api.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class GetPostsResponseItem(
+data class User(
     @SerializedName("body")
     var body: String,
     @SerializedName("id")
